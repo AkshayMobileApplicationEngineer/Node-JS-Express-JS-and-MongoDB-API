@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node-JS-Express-JS-and-MongoDB-API Documentation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { padding: 20px; }
+        pre { background-color: #f8f9fa; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Node-JS-Express-JS-and-MongoDB-API</h1>
+    <p>This project demonstrates a simple API to add a new student to the MongoDB database using <code>Node.js</code> and <code>Express.js</code>.</p>
+
+    <h2>API Endpoint</h2>
+    <h3>Add Student (POST)</h3>
+    <p>Path: <code>
+        <a href="http://localhost:8000/api/addStudent">http://localhost:8000/api/addStudent</a>
+        
+    </code></p>
+
+    <h4>Request Body:</h4>
+    <pre><code>{
+  "name": "Akshay",
+  "email": "akshay@apistudent.com",
+  "phone": "123456789012",
+  "regd_no": "124ybeh",
+  "gender": "male",
+  "address": "Jharkhand"
+}</code></pre>
+
+    <h4>Response:</h4>
+    <p>- Success: Returns the newly added student details.</p>
+    <p>- Error: If the student already exists or there’s an error in the database.</p>
+
+    <h3>Sample Response:</h3>
+    <pre><code>{
+    "success": true,
+    "message": "Student added successfully",
+    "Student": {
+        "name": "Akshay Kumar Prajapati",
+        "email": "akshay@apistudent.com",
+        "phone": "123456e7644",
+        "regd_no": "12436jh",
+        "gender": "male",
+        "address": "Bihar",
+        "_id": "66eb0d911b314625665786a0",
+        "__v": 0
+    }
+}</code></pre>
+
+    <h4>Explanation:</h4>
+    <ul>
+        <li><strong>success</strong>: <code>true</code> indicates the student was added successfully.</li>
+        <li><strong>message</strong>: A confirmation message <code>"Student added successfully"</code>.</li>
+        <li><strong>Student</strong>: Contains the newly added student details:
+            <ul>
+                <li><strong>name</strong>: <code>"Akshay Kumar Prajapati"</code></li>
+                <li><strong>email</strong>: <code>"akshay@apistudent.com"</code></li>
+                <li><strong>phone</strong>: <code>"123456e7644"</code></li>
+                <li><strong>regd_no</strong>: <code>"12436jh"</code></li>
+                <li><strong>gender</strong>: <code>"male"</code></li>
+                <li><strong>address</strong>: <code>"Bihar"</code></li>
+                <li><strong>_id</strong>: A unique identifier assigned by MongoDB for this student entry <code>"66eb0d911b314625665786a0"</code>.</li>
+                <li><strong>__v</strong>: A version key maintained by MongoDB, initialized at <code>0</code>.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h3>Find Student by ID</h3>
+    <pre><code>{
+    "_id": "66eb0f901b314625665786a3",
+    "name": "Suman Kumar Shrama",
+    "email": "akshay@apistudent.com",
+    "phone": "918521616730",
+    "regd_no": "12436jh",
+    "gender": "male",
+    "address": "Uk",
+    "__v": 0
+}</code></pre>
+
+    <hr>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
